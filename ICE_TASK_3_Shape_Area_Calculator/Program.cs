@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            
+            Rectangle R = new Rectangle("Rectange Name", 14.00, 4.00);
+            Circle C = new Circle("Circle Name", 12.00);
+
+            R.Display();
+            Console.WriteLine();
+            C.Display();
         }
     }
 }
