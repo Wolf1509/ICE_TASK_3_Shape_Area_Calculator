@@ -7,15 +7,16 @@ on:
     branches: ["master"] 
 
 jobs: 
-  build: 
-    run-on: ubuntu-latest # Uses a VM Runner
+  builds: 
+    runs-on: ubuntu-latest # Uses a VM Runner
 
     steps: 
     - name: Checkout Code # Clones the Repo
       uses: actions/checkout@v4
 
     # Setup SDK.NET
-    - name: actions/setup-dotnet@v4
+    - name: Setup SDK
+      uses: actions/setup-dotnet@v4
       with: 
         dotnet-version: '9.0' # Change to framework used
 
